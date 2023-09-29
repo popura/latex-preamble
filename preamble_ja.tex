@@ -1,0 +1,64 @@
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsxtra}
+\usepackage{mathrsfs}
+\usepackage{latexsym}
+\usepackage{arydshln}
+%\usepackage{cite}
+%\usepackage{enumitem}
+\usepackage{url}
+\usepackage{flushend}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\usepackage{mathtools}
+%\usepackage[hypertexnames=false,setpagesize=false]{hyperref}
+%\usepackage{pxjahyper}
+\usepackage{cleveref}
+
+\makeatletter
+\let\MYcaption\@makecaption
+\makeatother
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+\makeatletter
+\let\@makecaption\MYcaption
+\makeatother
+\captionsetup[subfigure]{font=footnotesize, justification=centering}
+
+% macro
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\boldsymbol{\mathrm{#1}}}
+\newcommand{\set}[1]{\mathbb{#1}}
+\newcommand{\gaussian}[3]{\mathcal{N}(#1 | #2, #3)}
+\newcounter{num}
+\newcommand{\rnum}[1]{\setcounter{num}{#1} \roman{num}}
+\newcommand{\Rnum}[1]{\setcounter{num}{#1} \Roman{num}}
+
+\newcommand{\tp}[1]{#1^\top}
+\newcommand{\htp}[1]{#1^\mathrm{H}}
+\newcommand{\pinv}[1]{#1^\dagger}
+\newcommand{\linspace}[1]{\mathit{#1}}
+\newcommand{\grad}{\nabla}
+% \newcommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+\newcommand{\ip}[2]{#1^\top \: #2}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\trace}{trace}
+\DeclareMathOperator*{\argmin}{arg~min}
+\DeclareMathOperator*{\argmax}{arg~max}
+
+%cleveref関連
+\crefname{equation}{式}{式}% {環境名}{単数形}{複数形} \crefで引くときの表示
+\crefname{figure}{図}{図}% {環境名}{単数形}{複数形} \crefで引くときの表示
+\crefname{table}{表}{表}% {環境名}{単数形}{複数形} \crefで引くときの表示
+\crefname{algorithm}{アルゴリズム}{アルゴリズム}
+\newcommand{\crefpairconjunction}{と}
+\newcommand{\crefrangeconjunction}{から}
+\newcommand{\crefmiddleconjunction}{，}
+\newcommand{\creflastconjunction}{，および}
