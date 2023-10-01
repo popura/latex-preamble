@@ -6,8 +6,8 @@
 \usepackage{mathrsfs}
 \usepackage{latexsym}
 \usepackage{arydshln}
-%\usepackage{cite}
-%\usepackage{enumitem}
+\usepackage{cite}
+\usepackage{enumitem}
 \usepackage{url}
 \usepackage{flushend}
 \usepackage{algorithm}
@@ -16,6 +16,7 @@
 \usepackage{listings}
 \usepackage{multirow}
 \usepackage{booktabs}
+\usepackage{tikz}
 
 \usepackage{mathtools}
 %\usepackage[hypertexnames=false,setpagesize=false]{hyperref}
@@ -33,9 +34,9 @@
 \captionsetup[subfigure]{font=footnotesize, justification=centering}
 
 % macro
-\newcommand{\myvector}[1]{\boldsymbol{#1}}
-\newcommand{\mymatrix}[1]{\boldsymbol{\mathrm{#1}}}
-\newcommand{\myset}[1]{\mathbb{#1}}
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\boldsymbol{\mathrm{#1}}}
+\newcommand{\set}[1]{\mathbb{#1}}
 \newcommand{\gaussian}[3]{\mathcal{N}(#1 | #2, #3)}
 \newcounter{num}
 \newcommand{\rnum}[1]{\setcounter{num}{#1} \roman{num}}
@@ -52,7 +53,9 @@
 \DeclareMathOperator{\trace}{trace}
 \DeclareMathOperator*{\argmin}{arg~min}
 \DeclareMathOperator*{\argmax}{arg~max}
-\newcommand{\ddnmp}{\textrm{DDNM}^{+}}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
 
 %cleveref関連
 \crefname{equation}{}{}% {環境名}{単数形}{複数形} \crefで引くときの表示
