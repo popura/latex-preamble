@@ -6,8 +6,8 @@
 \usepackage{mathrsfs}
 \usepackage{latexsym}
 \usepackage{arydshln}
-%\usepackage{cite}
-%\usepackage{enumitem}
+\usepackage{cite}
+\usepackage{enumitem}
 \usepackage{url}
 \usepackage{flushend}
 \usepackage{algorithm}
@@ -16,6 +16,7 @@
 \usepackage{listings}
 \usepackage{multirow}
 \usepackage{booktabs}
+\usepackage{tikz}
 
 \usepackage{mathtools}
 %\usepackage[hypertexnames=false,setpagesize=false]{hyperref}
@@ -52,6 +53,10 @@
 \DeclareMathOperator{\trace}{trace}
 \DeclareMathOperator*{\argmin}{arg~min}
 \DeclareMathOperator*{\argmax}{arg~max}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
 
 %cleveref関連
 \crefname{equation}{式}{式}% {環境名}{単数形}{複数形} \crefで引くときの表示
