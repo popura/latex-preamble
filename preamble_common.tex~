@@ -66,10 +66,3 @@
 \crefname{figure}{Fig.}{Figs.}% {環境名}{単数形}{複数形} \crefで引くときの表示
 \crefname{table}{Table}{Tables}% {環境名}{単数形}{複数形} \crefで引くときの表示
 \crefname{algorithm}{Algorithm}{Algorithm}
-
-\newcommand\marklessfootnote[1]{%
-    \begingroup
-    \renewcommand\thefootnote{}\footnote{#1}%
-    \addtocounter{footnote}{-1}%
-    \endgroup
-}
