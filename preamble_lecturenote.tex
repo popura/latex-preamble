@@ -1,0 +1,76 @@
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable, skins, theorems}
+\usepackage{varwidth} 
+\usepackage{marginnote}
+
+\definecolor{frameinnercolor}{RGB}{49,44,44}
+
+\newenvironment{theorem}[3][]{%
+%#1 = タイトル, #2 = 環境名, #3 = 定理環境名
+\refstepcounter{#2}%
+\newtcolorbox{theobox}[1][]{%
+enhanced,frame empty,interior empty,
+coltitle=white,fonttitle=\bfseries,colbacktitle=frameinnercolor,
+extras broken={frame empty,interior empty},
+borderline={0.5mm}{0mm}{frameinnercolor},
+sharp corners=downhill,
+breakable=true,
+top=4mm,
+before skip=3.5mm,
+attach boxed title to top left={yshift=-3mm,xshift=3mm},
+boxed title style={boxrule=0pt,sharp corners=all},varwidth boxed title,
+title=##1,
+}
+\ifstrempty{#1}{% ifstremptyはetoolbox.styで定義．etoolbox.styはtcolorboxが読み込むので宣言不要
+\begin{theobox}[#3~\csname the#2\endcsname.]}
+{\begin{theobox}[#3~\csname the#2\endcsname:~{#1}]}
+}{\end{theobox}}
+
+\newcounter{theorem}
+\numberwithin{theorem}{section}% numberwithinはamsmath.styで定義されている
+\newenvironment{theo}[1][]%
+{\begin{theorem}[#1]{theorem}{定理}%
+}{\end{theorem}}
+
+\newcounter{proposition}
+\numberwithin{proposition}{section}
+\newenvironment{prop}[1][]%
+{\begin{theorem}[#1]{proposition}{命題}%
+}{\end{theorem}}
+
+\newcounter{lemma}
+\numberwithin{lemma}{section}
+\newenvironment{lem}[1][]%
+{\begin{theorem}[#1]{lemma}{補題}%
+}{\end{theorem}}
+
+\newcounter{example}
+\numberwithin{example}{section}
+\newenvironment{ex}[1][]%
+{\begin{theorem}[#1]{example}{例}%
+}{\end{theorem}}
+
+\newcounter{exercise}
+\numberwithin{exercise}{section}
+\newenvironment{exc}[1][]%
+{\begin{theorem}[#1]{exercise}{演習問題}%
+}{\end{theorem}}
+
+\newcounter{practice}
+\numberwithin{practice}{section}
+\newenvironment{prac}[1][]%
+{\begin{theorem}[#1]{practice}{例題}%
+}{\end{theorem}}
+
+
+\newtcolorbox{board}[1][]{%
+enhanced,frame empty,interior empty,
+coltitle=white,fonttitle=\bfseries,colbacktitle=frameinnercolor,
+extras broken={frame empty,interior empty},
+borderline={0.5mm}{0mm}{frameinnercolor},
+sharp corners=downhill,
+breakable=true,
+top=4mm,
+before skip=3.5mm,
+title={#1},
+}
