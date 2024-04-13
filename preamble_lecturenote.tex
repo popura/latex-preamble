@@ -26,6 +26,12 @@ title=##1,
 {\begin{theobox}[#3~\csname the#2\endcsname:~{#1}]}
 }{\end{theobox}}
 
+\newcounter{definition}
+\numberwithin{definition}{section}% numberwithinはamsmath.styで定義されている
+\newenvironment{df}[1][]%
+{\begin{theorem}[#1]{definition}{定義}%
+}{\end{theorem}}
+
 \newcounter{theorem}
 \numberwithin{theorem}{section}% numberwithinはamsmath.styで定義されている
 \newenvironment{theo}[1][]%
