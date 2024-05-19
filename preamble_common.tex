@@ -5,7 +5,6 @@
 \usepackage{amsxtra}
 \usepackage{mathrsfs}
 \usepackage{latexsym}
-\usepackage{arydshln}
 \usepackage{cite}
 \usepackage{enumitem}
 \usepackage{url}
@@ -13,9 +12,11 @@
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
 \usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{arydshln}
 \usepackage{listings}
 \usepackage{multirow}
-\usepackage{booktabs}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usetikzlibrary{arrows.meta,calc,decorations.markings,math}
@@ -53,6 +54,7 @@
 \newcommand{\grad}{\nabla}
 \newcommand{\ip}[2]{\langle {#1}, {#2} \rangle}
 % \newcommand{\ip}[2]{#1^\top \: #2}
+\DeclareMathOperator{\sign}{sgn}
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\trace}{trace}
 \DeclareMathOperator*{\argmin}{arg~min}
@@ -60,8 +62,8 @@
 
 \DeclareMathOperator{\rect}{rect}
 \DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\train}{III}
 \DeclareMathOperator{\triwave}{\Lambda}
-\DeclareMathOperator{\step}{u}
 
 \definecolor{myorange}{rgb}{0.96, 0.67, 0}
 \definecolor{mygreen}{rgb}{0.01, 0.69, 0.48}
