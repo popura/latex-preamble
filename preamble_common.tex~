@@ -5,18 +5,21 @@
 \usepackage{amsxtra}
 \usepackage{mathrsfs}
 \usepackage{latexsym}
-\usepackage{arydshln}
 \usepackage{cite}
 \usepackage{enumitem}
 \usepackage{url}
-\usepackage{flushend}
+%\usepackage{flushend}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
 \usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{arydshln}
 \usepackage{listings}
 \usepackage{multirow}
-\usepackage{booktabs}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows.meta,calc,decorations.markings,math,shapes.geometric}
 
 \usepackage{mathtools}
 %\usepackage[hypertexnames=false,setpagesize=false]{hyperref}
@@ -42,17 +45,25 @@
 \newcommand{\rnum}[1]{\setcounter{num}{#1} \roman{num}}
 \newcommand{\Rnum}[1]{\setcounter{num}{#1} \Roman{num}}
 
+\newcommand{\conj}[1]{\overline{#1}}
 \newcommand{\tp}[1]{#1^\top}
 \newcommand{\htp}[1]{#1^\mathrm{H}}
+\newcommand{\inv}[1]{#1^{-1}}
 \newcommand{\pinv}[1]{#1^\dagger}
 \newcommand{\linspace}[1]{\mathit{#1}}
 \newcommand{\grad}{\nabla}
 \newcommand{\ip}[2]{\langle {#1}, {#2} \rangle}
 % \newcommand{\ip}[2]{#1^\top \: #2}
+\DeclareMathOperator{\sign}{sgn}
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\trace}{trace}
 \DeclareMathOperator*{\argmin}{arg~min}
 \DeclareMathOperator*{\argmax}{arg~max}
+
+\DeclareMathOperator{\rect}{rect}
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\train}{III}
+\DeclareMathOperator{\triwave}{\Lambda}
 
 \definecolor{myorange}{rgb}{0.96, 0.67, 0}
 \definecolor{mygreen}{rgb}{0.01, 0.69, 0.48}
